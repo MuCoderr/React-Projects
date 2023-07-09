@@ -1,0 +1,1 @@
+# Redux Başlangıç Projesi
