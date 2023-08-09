@@ -19,21 +19,18 @@ function App() {
 
   const handleButtonClick = value => {
     if (value === "=") {
-      // Calculate the result when "=" button is clicked
       try {
-        const calculatedResult = eval(result); // WARNING: Using 'eval' is not recommended in production apps.
+        const calculatedResult = eval(result);
         if (calculatedResult === Infinity || calculatedResult === -Infinity) {
           dispatch(setResult("Not divisible by zero"));
         } else {
           dispatch(setResult(String(calculatedResult)));
         }
       } catch (error) {
-        // Handle potential errors in the calculation
         dispatch(setResult("Error"));
       }
     } else if (value === "<-") {
-      // Clear the last entry when "CE" button is clicked
-      const newResult = result.slice(0, -1); // Remove the last character
+      const newResult = result.slice(0, -1);
       dispatch(setResult(newResult));
     } else if (value === "CE") {
       dispatch(setResult(""));
