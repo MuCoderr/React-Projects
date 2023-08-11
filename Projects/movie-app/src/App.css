@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.large {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link.active {
+  color: #163757;
+}
